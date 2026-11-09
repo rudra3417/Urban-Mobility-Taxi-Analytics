@@ -1,95 +1,43 @@
 # Urban Mobility Analytics
-### SQL Server | Power BI | Data Analytics
 
 ## Project Overview
-Urban Mobility Analytics is a data analytics project using NYC Yellow Taxi trip records to examine trip demand, pickup locations, payment methods, trip distances and recorded fare amounts.
+This project analyses NYC Yellow Taxi trip data using SQL Server and Power BI to understand trip demand, pickup locations, payment methods, trip distances and fare patterns.
 
-The objective was to use SQL Server to clean and analyse real-world taxi trip data, identify meaningful patterns, and present the results through an interactive Power BI dashboard.
+## Tools Used
+- SQL Server
+- Power BI
+- DAX
 
-## Business Objectives
-- Analyse taxi trip demand across different pickup hours.
-- Identify pickup zones with the highest trip volumes.
-- Understand the distribution of payment methods.
-- Examine how average fare varies across trip-distance categories.
-- Understand the distribution of trips across distance categories.
+## Dataset
+- **Source:** NYC Taxi & Limousine Commission (TLC)
+- **Dataset:** Yellow Taxi Trip Records
+- **Cleaned Records:** 38,826
 
-## Tools & Technologies
-- **SQL Server:** Data cleaning, transformation, aggregation and business analysis.
-- **Power BI:** Interactive dashboard development and visualisation.
-- **DAX:** Calculated columns and measures.
+## Project Structure
+- `SQL/` – SQL data cleaning and analysis queries
+- `Dashboard/` – Power BI dashboard
+- `Images/` – Dashboard screenshots
 
-## Data Source
-NYC Taxi & Limousine Commission (TLC) Yellow Taxi Trip Records.
-
-The project uses a sample of publicly available trip records. The analysed data is heavily concentrated on January 1, 2023, so findings should be interpreted within the scope of this sample.
-
-## Data Preparation
-Data preparation was performed using SQL Server.
-
-Key activities included:
-- Creating a separate working table for analysis.
-- Checking and handling missing values in selected columns.
-- Investigating duplicate records and invalid trip details.
-- Reviewing unusual fare, distance and duration values.
-- Applying documented cleaning rules before analysis.
-- Creating a payment method classification.
-
-Final cleaned dataset: **38,826 records**.
-
-## SQL Analysis
-The project addressed eight business questions:
-
-1. At what hours is taxi demand highest?
-2. Which pickup locations receive the most trips?
-3. Which pickup locations have the highest average fare?
-4. How does trip distance relate to recorded fare?
-5. Which payment methods are most commonly used?
-6. Which hours have the highest recorded fare amounts?
-7. How does trip duration vary across distance categories?
-8. Which trips have unusually high recorded fares?
-
-## Power BI Dashboard
-The interactive dashboard contains four KPI cards and five charts.
-
-**KPIs**
-- Total Trips
-- Average Fare
-- Average Duration
-- Total Fare
-
-**Visualisations**
-1. Hourly Trip Demand
-2. Payment Method Distribution
-3. Top 5 Pickup Locations
-4. Average Fare by Distance
-5. Trip Distribution by Distance Group
-
-**Interactive filters**
-- Payment Method
-- Pickup Location ID
+## Key Analysis
+- Hourly trip demand
+- Top pickup locations
+- Payment method distribution
+- Average fare by distance
+- Trip distribution by distance group
+- Trip duration by distance category
 
 ## Key Findings
+- Most trips in the sample occurred during late-night and early-morning hours.
+- Credit cards were the most commonly used payment method.
+- Some pickup zones recorded higher trip volumes than others.
+- Average fare increased with trip distance.
+- Short-distance trips accounted for approximately 77.2% of the dataset.
 
-- **Trip demand:** Recorded trip activity was concentrated in the late-night and early-morning hours, with a considerable decline later in the day.
-- **Payment methods:** Credit card payments represented approximately 75.4% of analysed trips, followed by cash payments.
-- **Pickup locations:** Trip demand was unevenly distributed across pickup zones, with certain zones recording substantially more trips.
-- **Distance and fare:** Average fare increased across distance categories, from $12.65 for trips up to 5 miles to $86.99 for trips above 20 miles.
-- **Trip distribution:** Short-distance trips dominated the dataset, accounting for approximately 77.2% of analysed trips.
-
-## Business Recommendations
-
-- Review service coverage during periods with higher recorded trip activity.
-- Monitor high-demand pickup zones when evaluating operational coverage.
-- Monitor disputed transactions to identify payment-related issues.
-- Consider both trip frequency and average fare when evaluating different journey categories.
-
-## Limitations
-- The dataset is heavily concentrated on January 1, 2023, and does not represent year-round taxi demand.
-- Recorded fare amounts do not represent driver profit or net revenue.
-- Pickup location analysis is based on location IDs and their corresponding taxi zones.
-- Findings are limited to the available sample and should not be generalised to all NYC taxi operations.
+## Dashboard
+The Power BI dashboard includes four KPI cards, five charts and interactive filters for payment method and pickup location.
 
 ## Conclusion
-This project demonstrates the use of SQL Server for real-world data preparation and business analysis, followed by Power BI dashboard development to communicate findings effectively.
+This project demonstrates practical skills in SQL data cleaning, business analysis, Power BI dashboard development and data interpretation.
 
-It provided practical experience in data cleaning, SQL querying, analytical thinking, KPI development and business interpretation.
+## Data Limitation
+The dataset is heavily concentrated on January 1, 2023. Therefore, the findings represent the available sample and should not be generalised to year-round NYC taxi activity.
